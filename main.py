@@ -7,16 +7,12 @@ app = FastAPI();
 async def root():
     return {};
 
-@app.get("/status")
-async def root():
-    return {"message": "Está funcionando!"};
-
 @app.get("/dados")
 async def funcaoTeste():
     return {
-            "name": "Maicon Kaiser", 
+            "name": "Teste", 
             "idade": "28", 
             "sexo": "Masculino",
-            "email": "maicon@teste.com",
+            "email": "teste@teste.com",
             "senha": "teste"
             };
