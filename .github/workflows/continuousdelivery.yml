@@ -15,6 +15,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: projetoCD.zip
-          path:
-            '**.py'
+          path: |
+            **.py
             README.md
