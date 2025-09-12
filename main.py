@@ -18,5 +18,5 @@ async def funcaoTeste():
             "idade": "28", 
             "sexo": "Masculino",
             "email": "maicon@teste.com",
-            "senha": "teste"
+            "senha": "teste2"
             };
