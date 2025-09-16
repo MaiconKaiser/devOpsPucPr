@@ -20,3 +20,12 @@ async def funcaoTeste():
             "email": "maicon@teste.com",
             "senha": "teste2"
             };
+
+@app.get("/saudacao")
+async def saudacao(nome: str = "visitante"):
+    return {"mensagem": f"Olá, {nome}!"}
+
+
+@app.get("/soma")
+async def soma(a: int, b: int):
+    return {"resultado": a + b}

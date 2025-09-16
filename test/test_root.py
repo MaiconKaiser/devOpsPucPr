@@ -21,3 +21,17 @@ async def test_funcao_teste():
         "email": "maicon@teste.com",
         "senha": "teste2"
     }
+
+def test_saudacao_default():
+    result = saudacao()
+    assert result == {"mensagem": "Olá, visitante!"}
+
+
+def test_saudacao_nome():
+    result = saudacao("Maicon")
+    assert result == {"mensagem": "Olá, Maicon!"}
+
+
+def test_soma():
+    result = soma(5, 7)
+    assert result == {"resultado": 12}
