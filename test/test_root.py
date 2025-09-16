@@ -21,3 +21,18 @@ async def test_funcao_teste():
         "email": "maicon@teste.com",
         "senha": "teste2"
     }
+
+@pytest.mark.asyncio
+async def test_saudacao_default():
+    result = await saudacao()
+    assert result == {"mensagem": "Olá, visitante!"}
+
+@pytest.mark.asyncio
+async def test_saudacao_nome():
+    result = await saudacao("Maicon")
+    assert result == {"mensagem": "Olá, Maicon!"}
+
+@pytest.mark.asyncio
+async def test_soma():
+    result = await soma(5, 7)
+    assert result == {"resultado": 12}
