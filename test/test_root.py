@@ -22,16 +22,17 @@ async def test_funcao_teste():
         "senha": "teste2"
     }
 
-def test_saudacao_default():
-    result = saudacao()
+@pytest.mark.asyncio
+async def test_saudacao_default():
+    result = await saudacao()
     assert result == {"mensagem": "Olá, visitante!"}
 
-
-def test_saudacao_nome():
-    result = saudacao("Maicon")
+@pytest.mark.asyncio
+async def test_saudacao_nome():
+    result = await saudacao("Maicon")
     assert result == {"mensagem": "Olá, Maicon!"}
 
-
-def test_soma():
-    result = soma(5, 7)
+@pytest.mark.asyncio
+async def test_soma():
+    result = await soma(5, 7)
     assert result == {"resultado": 12}
