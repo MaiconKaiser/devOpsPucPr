@@ -1,13 +1,19 @@
 from src.main import *;
 
 def testRoot():
-    assert root() == {};
+    result = root();
+    yield result;
+    assert result == {};
 
 def testRootSuccess():
-    assert rootSuccess() == {"message": "Está funcionando!"};
+    result = rootSuccess();
+    yield result;
+    assert result == {"message": "Está funcionando!"};
 
 def testFuncaoTeste():
-    assert funcaoTeste() == {
+    result = funcaoTeste();
+    yield result;
+    assert result == {
             "name": "Maicon Kaiser", 
             "idade": "28", 
             "sexo": "Masculino",
