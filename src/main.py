@@ -8,7 +8,7 @@ async def root():
     return {};
 
 @app.get("/status")
-async def root():
+async def rootSuccess():
     return {"message": "Está funcionando!"};
 
 @app.get("/dados")
