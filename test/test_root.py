@@ -1,15 +1,19 @@
+import pytest
 from src.main import *
 
-def test_root():
-    result = root()
+@pytest.mark.asyncio
+async def test_root():
+    result = await root()
     assert result == {}
 
-def test_root_success():
-    result = rootSuccess()
+@pytest.mark.asyncio
+async def test_root_success():
+    result = await rootSuccess()
     assert result == {"message": "Está funcionando!"}
 
-def test_funcao_teste():
-    result = funcaoTeste()
+@pytest.mark.asyncio
+async def test_funcao_teste():
+    result = await funcaoTeste()
     assert result == {
         "name": "Maicon Kaiser", 
         "idade": "28", 
