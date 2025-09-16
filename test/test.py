@@ -7,11 +7,13 @@ def testRoot():
     yield result;
     assert result == {};
 
+@pytest.fixture
 def testRootSuccess():
     result = rootSuccess();
     yield result;
     assert result == {"message": "Está funcionando!"};
 
+@pytest.fixture
 def testFuncaoTeste():
     result = funcaoTeste();
     yield result;
